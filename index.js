@@ -8,6 +8,12 @@ const app = express()
 // for Json Data
 app.use(express.json())
 connectDB()
+
+
+// Register routes
+app.use("/api/register", require("./routers/auth/register"))
+
+
 // Port
 const PORT = process.env.PORT || 5890
 
