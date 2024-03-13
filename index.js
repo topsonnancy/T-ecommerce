@@ -17,6 +17,8 @@ connectDB()
 app.use("/api/register", require("./routers/auth/register"))
 app.use("/api/login", require("./routers/auth/login"))
 app.use("/api/user", require("./routers/user"))
+app.use("/api/product", require("./routers/product"))
+//app.use("/api/cart", require("./routers/cart"))
 
 
 // Port
