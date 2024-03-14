@@ -66,7 +66,7 @@ const updateProduct = async (req, res) => {
 
     const getProducts = async (req, res) => {
         try {
-            const foundProduct = await Product.findOne().exec()
+            const foundProduct = await Product.find().exec()
             res.status(200).json(foundProduct)
         } catch (error) {
           res.status(500).json(`Error: ${error.message}`)  

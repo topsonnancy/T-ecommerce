@@ -9,7 +9,7 @@ router.route("/:id")
  .get(productController.getProduct)
 
 router.route("/")
- .post(verifyAdminOnly, productController.getProducts)
+ .post(verifyAdminOnly, productController.createProduct)
  .get(productController.getProducts)
 
 module.exports = router
