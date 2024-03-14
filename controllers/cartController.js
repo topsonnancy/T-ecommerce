@@ -15,7 +15,7 @@ const createCart = async (req, res) => {
 }
 
 const updateCart = async (req, res) => {
-    const { title, description, size, color, inStock, isAvailable, price, category, image} = req.body
+    const { userId, products}  = req.body
     try {
         const foundCart = await Cart.findOne({ _id: req.params.id}).exec()
        if (userId) foundCart.userId = userId
