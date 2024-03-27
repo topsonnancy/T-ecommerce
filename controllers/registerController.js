@@ -1,6 +1,7 @@
 const User = require("../models/User")
 const CryptoJs = require("crypto-js")
-// mpn i crypto-js
+
+// npm i crypto-js
 
 const handleRegister = async (req, res) => {
     const {user, email, image, pwd} = req.body

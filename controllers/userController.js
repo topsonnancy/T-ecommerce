@@ -43,7 +43,7 @@ const deleteUser = async (req, res) => {
 
     const getUsers = async (req, res) => {
         try {
-            const foundUser = await User.findOne().exec()
+            const foundUser = await User.find().exec()
             res.status(200).json(foundUser)
         } catch (error) {
           res.status(500).json(`Error: ${error.message}`)  

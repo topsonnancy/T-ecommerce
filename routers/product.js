@@ -7,7 +7,7 @@ router.route("/:id")
  .put(verifyAdminOnly, productController.updateProduct)
  .delete(verifyAdminOnly, productController.deleteProduct)
  .get(productController.getProduct)
-
+  
 router.route("/")
  .post(verifyAdminOnly, productController.createProduct)
  .get(productController.getProducts)

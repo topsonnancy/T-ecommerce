@@ -8,6 +8,7 @@ const handleLogin = async (req, res) => {
     try {
         const foundUser = await User.findOne({username: user}).exec()
         if (!foundUser) return res.status(401).json("Invalid username or password");
+
         const decryptPwd = CryptoJs.AES.decrypt(foundUser.password, process.env.HASHEDPWD).toString(CryptoJs.enc.Utf8);
         if (pwd !== decryptPwd) {
             return res.status(401).json("Invalid username or password");
@@ -27,3 +28,30 @@ const handleLogin = async (req, res) => {
 
 }
 module.exports = {handleLogin}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
